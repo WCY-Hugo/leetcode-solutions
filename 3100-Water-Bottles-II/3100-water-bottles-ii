@@ -1,0 +1,11 @@
+function maxBottlesDrunk(numBottles: number, numExchange: number): number {
+  let maxDrink: number = numBottles;
+
+  while (numBottles >= numExchange) {
+    numBottles -= numExchange;
+    numExchange++;
+    maxDrink++;
+    numBottles++;
+  }
+  return maxDrink;
+}
